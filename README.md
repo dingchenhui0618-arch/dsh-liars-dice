@@ -17,7 +17,7 @@
 
 它不试图复刻斗地主 / 德州那类完整规则牌类。这个项目想验证的是另一种交互：**读人、诈唬，以及 Agent 的叫价行为能不能被回看**。
 
-> 本项目是独立实现，没有复制现成的吹牛骰子代码，也没有引用或 fork 其他骰子插件。工程骨架（零依赖构建、`cordis.patch.yml`、host/client 两半、CI、测试结构）参考了 [dsh-warden](https://github.com/dingchenhui0618-arch/dsh-warden)。插件市场是否已有同类项目，本项目没有做全量检索，因此不作断言。
+> 本项目是独立实现，没有复制现成的吹牛骰子代码，也没有引用或 fork 其他骰子插件。工程骨架（零依赖构建、`cordis.patch.yml`、host/client 两半、CI、测试结构）参考了 [dsh-warden](https://github.com/dingchenhui0618-arch/dsh-warden)；`scripts/wrap-client.mjs` 与构建脚本结构沿用该骨架，游戏逻辑、概率、Agent prompt、UI 均为本项目自写。插件市场是否已有同类项目，本项目没有做全量检索，因此不作断言。
 
 ## 安装
 
