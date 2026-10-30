@@ -1,0 +1,65 @@
+{
+  "name": "dsh-liars-dice",
+  "version": "0.1.0",
+  "engines": { "dsh": ">=0.2.1-rc.2 <0.3.0" },
+  "description": "中文吹牛骰子 for DeepSeek Harness: hot-seat bidding, agent opponents and referee, replayable calls and challenges, and a switchable exact-probability panel.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "prepack": "node scripts/build.mjs",
+    "prepush:check": "node scripts/pre-push-check.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ],
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "game",
+    "dice",
+    "liars-dice",
+    "bluff",
+    "agent-opponent",
+    "probability",
+    "replay"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dingchenhui0618-arch/dsh-liars-dice.git"
+  },
+  "homepage": "https://github.com/dingchenhui0618-arch/dsh-liars-dice#readme",
+  "bugs": {
+    "url": "https://github.com/dingchenhui0618-arch/dsh-liars-dice/issues"
+  },
+  "license": "MIT"
+}
